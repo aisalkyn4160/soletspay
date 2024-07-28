@@ -1,0 +1,148 @@
+.stages{
+    padding: 60px 0 170px;
+    margin-top: -10px;
+    position: relative;
+    z-index: 100000;
+}
+.stages h2{
+    text-align: center;
+}
+.tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-links {
+    background: rgba(255, 255, 255, 0.03);
+    list-style: none;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 50px;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.tab-links li {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    height: 50px;
+}
+
+.tab-links a {
+    display: flex;
+    align-items: center;
+    padding: 5px 30px 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8) !important;
+    transition: all 0.3s ease;
+}
+.tab-links a span{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 1);
+    margin-right: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+.tab-links li.active{
+    border-color: rgba(12, 166, 130, 1);
+
+}
+.tab-links .active a {
+    color: #fff !important;
+    font-weight: 700;
+    /* border-radius: 50px; */
+}
+.tab-links .active a span{
+    background: rgba(12, 166, 130, 1);
+
+}
+.tab-links a:hover {
+    color: #007bff;
+}
+
+.tab-content {
+    width: 100%;
+}
+
+.tab {
+    display: none;
+
+}
+
+.tab.active {
+    display: flex;
+    gap: 52px;
+}
+
+.tab-img{
+    max-width: 774px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.tab-img  img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.tab p{
+    font-size: 22px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+.stages .container{
+    position: relative;
+}
+.map-img{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    animation-name: map-img;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes map-img {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+@media (max-width: 750px) {
+    .stages{
+        padding-bottom: 60px;
+    }
+    .tab.active{
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+@media (max-width: 600px) {
+    .tab-links{
+        border-radius: 10px;
+    }
+    .tab-links li{
+        width: 100%;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,51 @@
+.price-ttl-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.count{
+    border: 1px solid rgba(255, 255, 255, 0.23);
+    border-radius: 10px;
+    padding: 11px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.count span{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.currency{
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.currency div{
+    padding: 5px 19px;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+.currency div.active{
+    background: rgba(12, 166, 130, 1);
+}
+
+@media (max-width: 500px) {
+    .count{
+        padding: 10px;
+    }
+    .count span {
+    font-size: 17px;
+    }
+    .currency{
+        font-size: 15px;
+    }
+    .currency div{
+        padding: 5px 10px;
+    }
+}

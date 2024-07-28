@@ -1,0 +1,284 @@
+.card{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+.card-img{
+    /* max-width: 454px; */
+    width: 51.5%;
+}
+
+.card-img img{
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.platform{
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    color:rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.platform div{
+    display: flex;
+    gap: 10px;
+}
+.platform span{
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 17.76px;
+    color: rgba(255, 255, 255, 1);
+    white-space: nowrap;
+}
+
+.card-price{
+    width: 421px;
+}
+
+.gift-block{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.gift-btns-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.gift{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+}
+.gift-btns{
+    display: flex;
+    gap: 10px;
+}
+.gift-btn1{
+    width: 50px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.gift-btn1.switch{
+    background-color: rgba(12, 166, 130, 1);
+    transition: all 0.3s ease-out;
+
+}
+.gift-btn1 span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    transition: left 0.3s ease-out;
+
+}
+.gift-btn1.switch span{
+    left: 25px;
+}
+.gift-btn2{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.price-block{
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 20px 20px 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.price-block .new-price{
+    font-size: 28px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 22px;
+
+}
+.price-block .old-price{
+    font-size: 16px;
+    position: relative;
+}
+.discount{
+    background: rgba(220, 53, 69, 1);
+    border-radius: 3px;
+    padding: 3px 4px 5px 5px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+    color: rgba(255, 255, 255, 1) !important;
+    text-decoration: none !important;
+    margin-right: 11px;
+}
+.old-price .discount{
+    position: absolute;
+    top: -2px;
+    left: -54px;
+}
+.price-ttl{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 13px;
+}
+.price-list li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:15px 20px;
+    margin-right: -20px;
+    margin-left: -20px;  
+    color: rgba(255, 255, 255, 0.8);
+}
+.price-list li.active{
+    background: rgba(255, 255, 255, 0.1);
+    
+}
+.price-list li p{
+    display: flex;
+    align-items: center;
+}
+.price-list li p svg{
+    width: 0;
+    transition: width 0.3s ease-out;
+}
+.price-list li.active p svg{
+    width: 33px;
+    margin-right: 10px;
+}
+.price-list .discount{
+    display: none;
+}
+.price-list li.active .discount{
+    display: block;
+}
+.price{
+    font-size: 16px;
+    font-weight: 700;
+}
+.delivery{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.price-block .btn{
+    padding-bottom: 18px;
+    margin-bottom: 16px;
+}
+.btn.green-btn{
+    border: 1px solid rgba(12, 166, 130, 1);
+    background-color: transparent;
+    color: rgba(12, 166, 130, 1) !important;
+    margin-bottom: 0;
+}
+
+.question-ttl-btn .arrow{
+    transform: rotate(180deg);
+}
+
+.collapse-btn.active{
+    background-color: transparent;
+    transition: background-color 0.3s ease-out;
+}
+
+.collapse-btn.active .arrow{
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-out;
+}
+
+.collapse-btn.active path{
+    stroke: red;
+}
+.questions-list p{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+    padding-right: 100px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.more-text{
+    max-height: 0;
+    visibility: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.show-more{
+    display: block;
+    width: max-content;
+    cursor: pointer;
+    margin-top: 16px;
+    color: rgba(152, 152, 152, 1);
+    border-bottom: 1px solid rgba(152, 152, 152, 1);
+}
+
+@media (max-width: 1150px){
+    .platform div{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1050px){
+    .card{
+        flex-direction: column;
+    }
+    .card-img{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px){
+    .platform{
+        padding: 10px;
+        gap: 10px;
+    }
+    .platform span{
+        font-size: 10px;
+        padding: 5px;
+    }
+    .card-price{
+        width: 100%;
+    }
+    .gift-block{
+        padding: 10px;
+    }
+    .gift{
+        font-size: 14px;
+    }
+    
+}

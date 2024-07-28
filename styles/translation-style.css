@@ -1,0 +1,287 @@
+.payment{
+    display: flex;
+    gap: 27px;
+    margin-bottom: 59px;
+}
+.payment h3{
+    margin-top: 0;
+}
+.payment-steps{
+    width: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    padding: 30px;
+}
+.payment-steps-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.payment-steps-list li{
+    display: flex;
+    gap: 19px;
+}
+.payment-steps-list li span{
+    flex-shrink: 0;
+    width: 56px;
+    height: 57px;
+    border-radius: 50%;
+    background-image: url('../assets/icons/verified.png.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(12, 166, 130, 1);
+    font-weight: 600;
+}
+.payment-steps-list h4{
+    margin-bottom: 11px;
+}
+.payment-steps-list .important-text{
+    color: rgba(12, 166, 130, 1);
+    margin-top: 8px;
+    font-weight: 600;
+}
+.payment-form{
+    width: 50%;
+    padding: 30px;
+    background-color: rgba(12, 166, 130, 1);
+    border-radius: 10px;
+}
+.payment-form form{
+    width: 100%;
+   
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+form input,
+form textarea{
+    border-radius: 10px;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.89);
+}
+
+form button{
+    width: 100%;
+    border-radius: 50px;
+    padding: 17px 0px;
+    text-align: center;
+    background: rgba(255, 255, 255, 1);
+    color: rgba(12, 166, 130, 1);
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+form span{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.5px;
+    text-align: center;
+}
+
+form span a{
+    text-decoration: underline;
+}
+
+.translation .questions-list{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 22px;
+    align-items: flex-start;
+}
+.translation .questions-list li{
+    width: calc(50% - 30px);
+}
+
+.transfer{
+    background: rgba(255, 255, 255, 0.03);
+    padding: 60px 0;
+    position: relative;
+}
+.transfer-map{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    animation-name: transfer-map;
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes transfer-map {
+    0%{
+        transform: translate(0);
+    }
+    50%{
+        transform: translateY(50%);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+.transfer h3{
+    margin-top: 0;
+}
+.transfer .payment-steps{
+    background: transparent;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 58px;
+}
+.transfer .payment-steps-list{
+    flex-direction: row;
+    justify-content: space-between;
+}
+.transfer .payment-steps-list li{
+    width: 25%;
+    flex-direction: column;
+    position: relative;
+    padding-right: 26px;
+}
+.transfer .payment-steps-list li::after{
+    content: '';
+    width: 1px;
+    height: 306px;
+    background: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.transfer .payment-steps-list li:last-child::after{
+    display: none;
+}
+.transfer .payment-steps-list .important-text{
+    color: rgba(255, 255, 255, 0.71);
+}
+.transfer .payment-form{
+    width: 100%;
+    padding: 0;
+    background-color: transparent;
+    margin-bottom: 60px;
+}
+.transfer form{
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.transfer form input{
+    width:  calc(33% - 10px);
+    background: rgba(255, 255, 255, 0.95);
+}
+.transfer form textarea{
+    resize: none;
+    padding: 14px 16px;
+    width: 100%;
+    border-radius: 10px;
+    height: 49px;
+    background: rgba(255, 255, 255, 0.95);
+}
+.transfer button{
+    width: 50%;
+    background-color: rgba(12, 166, 130, 1);
+    color: rgba(255, 255, 255, 1);
+    transition: all 0.5s ease-out;
+}
+.transfer button:hover{
+    background-color: rgba(255, 255, 255, .95);
+    color: rgba(12, 166, 130, 1);
+}
+.transfer form span{
+    width: 48%;
+    text-align: left;
+}
+.feedback{
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+}
+.feedback .container{
+    display: flex;
+    justify-content: space-between;
+}
+.feedback h3{
+    margin-top: 0;
+}
+.feedback p{
+    max-width: 470px;
+    font-size: 18px;
+}
+.feedback form{
+    width: 50%;
+    margin-top: 16px;
+}
+.feedback form textarea{
+    resize: none;
+    height: 101px;
+}
+
+@media (max-width: 950px){
+    .payment{
+        flex-direction: column;
+    }
+    .payment-steps{
+        width: 100%;
+    }
+    .payment-form{
+        width: 100%;
+    }
+    .translation .questions-list{
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .translation .questions-list li{
+        width: 100%;
+    }
+    .transfer .payment-steps-list{
+        flex-direction: column;
+    }
+    .transfer .payment-steps-list li{
+        width: 100%;
+        padding-right: 0;
+    }
+    .transfer .payment-steps-list li::after{
+        display: none;
+    }
+    .transfer form input{
+        width: 100%;
+    }
+    .transfer button{
+        width: 100%;
+    }
+    .transfer form span{
+        width: 100%;
+        text-align: center;
+    }
+    .feedback .container{
+        flex-direction: column;
+    }
+    .feedback form{
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px){
+    .payment-steps{
+        padding: 15px;
+    }
+    .payment-steps-list li span{
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+    .payment-form{
+        padding: 20px 15px;
+    }
+    form{
+        gap: 10px;
+    }
+}

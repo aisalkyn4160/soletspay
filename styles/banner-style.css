@@ -1,0 +1,64 @@
+.banner{
+    margin-top: -2px;
+}
+.banner h1{
+    max-width: 519px;
+} 
+
+.banner h1 b{
+    display: block;
+    font-weight: 800;
+}
+.banner h1 span{
+    color: rgba(12, 166, 130, 1);
+}
+
+.banner p{
+    max-width: 600px;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.swiper-slide{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.banner-content{
+    padding: 95px 0;
+    background: linear-gradient(270deg, rgba(30, 30, 30, 0) 0%, #1E1E1E 63.5%) no-repeat center center /100% ; 
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: 71px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swiper-pagination-bullet{
+    width: 11px;
+    height: 11px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    opacity: 1;
+    background-color: transparent;
+    cursor: pointer;
+}
+.swiper-pagination-bullet-active{
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 8px solid rgba(0, 0, 0, .5);
+    box-sizing: content-box;
+}
+
+@media (max-width: 800px){
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+        bottom: 40px;
+    }
+}
+@media (max-width: 500px){
+    .banner p{
+        font-size: 14px;
+		margin-bottom: 20px;
+    }
+}
