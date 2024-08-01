@@ -131,6 +131,7 @@ h3{
 h4{
 	font-size: 18px;
 	font-weight: 600;
+	line-height: 24.59px;
 }
 h5{
 	font-size: 16px;
@@ -198,3 +199,4 @@ button:hover{
 		padding: 12px 49px;
 	}
 }
+

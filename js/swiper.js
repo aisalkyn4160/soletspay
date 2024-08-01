@@ -4,9 +4,9 @@ const swiper = new Swiper('.banner.swiper', {
     pagination: {
     el: '.swiper-pagination',
     },
-    // autoplay: {
-    //     delay: 3000,
-    // }
+    autoplay: {
+        delay: 5000,
+    }
 });
 
 const bullets = document.querySelectorAll(".swiper-pagination-bullet");

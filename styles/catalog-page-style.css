@@ -1,31 +1,26 @@
+
 .catalog-block{
     display: flex;
     gap: 22px;
-    position: relative;
     overflow: hidden;
+}
+@keyframes map-img2 {
+
+     to{
+        transform: translateY(300vh);
+     }
 }
 .catalog-map{
     width: 100%;
-    position: absolute;
+    height: 700px;
+    position: fixed;
     z-index: -1;
     animation-name: map-img2;
-    animation-duration: 20s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-timeline: scroll();
 }
 
-@keyframes map-img2 {
-    0%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(40%);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
+
 aside{
     width: 285px;
     height: fit-content;
@@ -40,13 +35,17 @@ aside ul li{
     margin-left: -20px;
     margin-right: -20px;
     margin-bottom: 8px;
-    transition: all 0.5s ease;
+    transition: background 0.3s ease-in;
+}
+.aside-nav h4{
+    margin-bottom: 15px;
 }
 .aside-nav-item{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:12px 0;
+    padding-top: 12px;
+    padding-bottom: 25px;
 }
 .aside-nav-item > div,
 .aside-nav-item a{
@@ -56,6 +55,9 @@ aside ul li{
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
+}
+aside li{
+    border-left: 2px solid transparent;
 }
 aside li.active{
     border-left: 2px solid rgba(255, 255, 255, 1);
@@ -70,7 +72,7 @@ aside li.active{
 }
 .aside-nav-item.active .arrow{
     transform: rotate(180deg);
-    transition: transform 500ms ease-in-out;
+    transition: transform 300ms ease-in-out;
 }
 .aside-nav-list{
     display: flex;
@@ -82,6 +84,9 @@ aside li.active{
     overflow: hidden;
     transition: max-height 500ms ease-in-out;
     padding-left: 17px;
+}
+.aside-nav-list li{
+    margin-bottom: 0;
 }
 .aside-nav-list a{
     transition: color 0.5s ease;
@@ -125,6 +130,11 @@ aside li.active{
     position: relative;
     display: flex;
     flex-direction: column;
+    transition: box-shadow 0.5s ease;
+    cursor: pointer;
+}
+.catalog-item:hover{
+    box-shadow: 0px 0px 20px rgba(12, 166, 130, 1);
 }
 .catalog-item.hidden{
     display: none;
@@ -206,6 +216,7 @@ aside li.active{
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    margin-bottom: 141px;
     gap: 20px;
 }
 .control{
@@ -275,7 +286,9 @@ aside li.active{
    .catalog-block{
        flex-direction: column;
    }
-    
+   .pagination{
+    margin-bottom: 70px;
+   }
 }
 
 @media (max-width: 450px){
