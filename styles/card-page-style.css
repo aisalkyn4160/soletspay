@@ -60,6 +60,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 .gift{
     display: flex;
@@ -78,6 +79,7 @@
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.1);
     position: relative;
+    flex-shrink: 0;
 }
 
 .gift-btn1.switch{
@@ -101,6 +103,35 @@
 .gift-btn1.switch span{
     left: 25px;
 }
+.clue{
+    opacity: 0;
+    width: 213px;
+    padding: 20px 18px;
+    border-radius: 27px;
+    background: rgba(30, 30, 30, 1);
+    font-size: 14px;
+    font-weight: 400;
+    color:rgba(255, 255, 255, 0.8);
+    text-align: center;
+    position: absolute;
+    bottom: calc(100% + 30px);
+    right: -15px;
+    cursor: context-menu;
+    transition: opacity 0.3s ease-out;
+}
+.clue-text{
+    position: relative;
+}
+.clue-text::after{
+    content: '';
+    width: 26px;
+    height: 26px;
+    background: rgba(30, 30, 30, 1);
+    transform: rotate(45deg) skew(10deg, 10deg);
+    position: absolute;
+    bottom: -26px;
+    right: 9px;
+}
 .gift-btn2{
     width: 30px;
     height: 30px;
@@ -109,8 +140,11 @@
     cursor: pointer;
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.8);
+    flex-shrink: 0;
 }
-
+.gift-btn2:hover + .clue{
+    opacity: 1;
+}
 .price-block{
     background-color: rgba(255, 255, 255, 0.03);
     padding: 20px 20px 30px;
