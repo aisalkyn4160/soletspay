@@ -1,3 +1,6 @@
+.search-page .container{
+    position: relative;
+}
 .search-block{
     max-width: 690px;
     height: 50px;
@@ -34,6 +37,8 @@
 }
 .search-page .catalog-wrapper{
     grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr;
+    margin-bottom: 293px;
 }
 .search-page p{
     font-size: 18px;

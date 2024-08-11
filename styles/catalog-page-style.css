@@ -1,9 +1,11 @@
-
+.catalog-block.container{
+    padding-bottom: 141px;
+    position: relative;
+}
 .catalog-block{
     display: flex;
     gap: 22px;
     overflow: hidden;
-    
 }
 @keyframes map-img2 {
 
@@ -218,7 +220,6 @@ aside li.active{
     display: flex;
     justify-content: center;
     margin-top: 30px;
-    margin-bottom: 141px;
     gap: 20px;
 }
 .control{
@@ -288,7 +289,7 @@ aside li.active{
    .catalog-block{
        flex-direction: column;
    }
-   .pagination{
+   .catalog-block.container{
     margin-bottom: 70px;
    }
 }
