@@ -171,7 +171,11 @@ button{
 button:hover{
 	box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.5);
 }
-
+@media (max-width: 1050px) {
+	.index-main{
+		margin-top: -70px;
+	}
+}
 @media (max-width: 600px) {
 	h1{
 		font-size: 32px;
